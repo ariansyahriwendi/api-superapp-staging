@@ -9,6 +9,8 @@ let orderId: any
 let orderItemId: any
 
 When('api user get order detail', async function () {
+
+    await browser.pause(3000)
     
     response = await axios.get(`https://staging-api-dashboard.superapp.co.id/api/order/detail/${id}`, {
         headers: {

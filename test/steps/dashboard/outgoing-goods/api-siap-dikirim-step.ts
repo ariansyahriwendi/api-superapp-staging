@@ -1,7 +1,7 @@
 import { When } from '@cucumber/cucumber'
 import { expect } from 'chai'
 import axios from 'axios'
-import { orderId } from '../penjualan/api-order-detail-step'
+import { orderId } from '../penjualan/api-get-order-detail-step'
 
 let response: any
 let requestBody: any

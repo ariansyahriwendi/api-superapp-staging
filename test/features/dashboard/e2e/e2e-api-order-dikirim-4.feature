@@ -1,9 +1,8 @@
-Feature: E2E Order - Dikirim
+Feature: E2E Penjualan - Dikirim
 
-        Scenario: Order - Dikirim
+        Scenario: Penjualan - Dikirim 4 Product
              When api user login
-             When api user create a new order
-            #  When api user create a new order 4 product
+             When api user create a new order 4 product
              When api user get order detail
              When api user ganti vendor
              When api user assign kurir

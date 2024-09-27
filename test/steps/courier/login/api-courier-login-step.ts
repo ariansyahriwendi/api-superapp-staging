@@ -5,7 +5,7 @@ import { expect } from 'chai'
 let response: any
 let requestBody: any
 
-When('I login as courier', async function () {
+When('api user courier login', async function () {
     
     requestBody = {
         "username": "nafifurqon",

@@ -1,7 +1,7 @@
-Feature: Admin Dikirim
+Feature: Dikirim
 
         Scenario: Dikirim
-             When I dikirim
+             When api user dikirim
 
         Examples:
                   | a | b |

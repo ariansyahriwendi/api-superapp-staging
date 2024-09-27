@@ -1,7 +1,7 @@
-Feature: Admin Ganti Vendor
+Feature: Ganti Vendor
 
         Scenario: Ganti vendor
-             When I ganti vendor
+             When api user ganti vendor
 
         Examples:
                   | a | b |

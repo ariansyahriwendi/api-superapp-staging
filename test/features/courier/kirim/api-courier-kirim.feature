@@ -1,7 +1,7 @@
 Feature: Courier Transaction
 
         Scenario: Transaction as courier
-             When I transaction as courier
+             When api user courier kirim
 
         Examples:
                   | a | b |

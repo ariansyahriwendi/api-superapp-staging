@@ -1,15 +1,15 @@
 import { When } from '@cucumber/cucumber'
 import axios from 'axios'
 import { expect } from 'chai'
-import { id } from './admin-order-marketplace-step'
+import { id } from './api-order-marketplace-step'
 
 let response: any
 let invoice: any
 let orderId: any
 let orderItemId: any
 
-When('I get order detail', async function () {
-
+When('api user get order detail', async function () {
+    
     response = await axios.get(`https://staging-api-dashboard.superapp.co.id/api/order/detail/${id}`, {
         headers: {
             "Authorization": `Bearer ${this.token}`

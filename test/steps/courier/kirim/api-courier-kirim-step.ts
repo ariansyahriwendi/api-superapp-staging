@@ -5,7 +5,7 @@ import { expect } from 'chai'
 let response: any
 let requestBody: any
 
-When('I transaction as courier', async function () {
+When('api user courier kirim', async function () {
 
     const token = this.token;
 

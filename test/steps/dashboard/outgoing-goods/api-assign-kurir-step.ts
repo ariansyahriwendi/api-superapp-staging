@@ -1,18 +1,16 @@
 import { When } from '@cucumber/cucumber'
 import { expect } from 'chai'
 import axios from 'axios'
-import { orderId } from './admin-order-detail-step'
+import { orderId } from '../penjualan/api-order-detail-step'
 
 let response: any
 let requestBody: any
 
-When('I assign kurir', async function () {
+When('api user assign kurir', async function () {
     
     requestBody = {
-        "ids": [],
-        "global_ids": [
-            orderId
-        ],
+        "ids": [orderId],
+        "global_ids": [],
         "type": "mobil",
         "driver_id": 300,
         "driver_name": null,

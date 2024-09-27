@@ -1,19 +1,16 @@
 import { When } from '@cucumber/cucumber'
 import { expect } from 'chai'
 import axios from 'axios'
-import { orderId } from './admin-order-detail-step'
+import { orderId } from '../penjualan/api-order-detail-step'
 
 let response: any
 let requestBody: any
 
-When('I ganti vendor', async function () {
+When('api user ganti vendor', async function () {
     
     requestBody = {
-        "ids": [],
-        "global_ids": [
-            orderId
-        ]
-        ,
+        "ids": [orderId],
+        "global_ids": [],
         "vendor_pic_id_before": 499,
         "vendor_pic_id_after": 43,
         "reason": "Order jumlah besar"

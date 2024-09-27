@@ -1,7 +1,7 @@
-Feature: Admin Siap Dikirim
+Feature: Siap Dikirim
 
         Scenario: Siap dikirim
-             When I siap dikirim
+             When api user siap dikirim
 
         Examples:
                   | a | b |

@@ -1,7 +1,7 @@
-Feature: Admin Assign Kurir
+Feature: User Assign Kurir
 
         Scenario: Assign kurir
-             When I assign kurir
+             When api user assign kurir
 
         Examples:
                   | a | b |

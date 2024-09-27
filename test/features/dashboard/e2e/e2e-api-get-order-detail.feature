@@ -1,7 +1,8 @@
-Feature: Admin Order Detail
+Feature: E2E Get Order Detail
 
         Scenario: Get order detail
-             When I get order detail
+             When api user login
+             When api user get order detail
 
         Examples:
                   | a | b |

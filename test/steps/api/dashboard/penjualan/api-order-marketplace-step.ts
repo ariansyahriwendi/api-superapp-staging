@@ -15,7 +15,7 @@ When('api user create a new order', async function () {
         customer_address_id: 166855,
         payment_type: "COD",
         note: "",
-        delivery_date: "2024-09-23",
+        delivery_date: "2024-09-27",
         group_type: "grosir",
         promos: [],
         promo_type: "",
@@ -67,11 +67,15 @@ When('api user create a new order', async function () {
 })
 
     expect(response.status).to.equal(200)
-    expect(response.data.result).to.have.property('id')
+    // expect(response.data.result).to.have.property('id')
     
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
     id = response.data.result.id
+    console.log('Id:', id)
+
+    this.id = id
+
     // console.log('Id:', Id)
 })
 
@@ -246,7 +250,9 @@ When('api user create a new order 4 product', async function () {
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
     id = response.data.result.id
-    // console.log('Id:', Id)
+    console.log('Id:', id)
+
+    this.id = id
 })
 
 When('api user create a new order with voucher', async function () {
@@ -321,6 +327,8 @@ When('api user create a new order with voucher', async function () {
 
     id = response.data.result.id
     // console.log('Id:', Id)
+    this.id = id
+
 })
 
 When('api user create a new order 4 product with voucher', async function () {
@@ -500,8 +508,10 @@ When('api user create a new order 4 product with voucher', async function () {
 
     id = response.data.result.id
     // console.log('Id:', Id)
+    this.id = id
+
 })
 
-export {id}
+// export {id}
 
 

@@ -1,7 +1,6 @@
 import { When } from '@cucumber/cucumber'
 import { expect } from 'chai'
 import axios from 'axios'
-import { orderId } from '../penjualan/api-get-order-detail-step'
 
 let response: any
 let requestBody: any
@@ -9,7 +8,7 @@ let requestBody: any
 When('api user assign kurir', async function () {
     
     requestBody = {
-        "ids": [orderId],
+        "ids": [this.orderId],
         "global_ids": [],
         "type": "mobil",
         "driver_id": 300,
@@ -25,7 +24,6 @@ When('api user assign kurir', async function () {
 })
 
     expect(response.status).to.equal(200)
-
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
 })

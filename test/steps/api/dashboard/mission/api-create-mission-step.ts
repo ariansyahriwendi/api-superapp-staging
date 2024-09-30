@@ -5,9 +5,23 @@ import axios from 'axios'
 
 let response: any
 let requestBody: any
+let getTodayDate: any | string
+let today: Date
+let year: number
+let month: string
+let day: string
 
 
 When('api user create mission', async function () {
+
+    getTodayDate = (): string => {
+        today = new Date()
+        year = today.getFullYear()
+        month = String(today.getMonth() + 1).padStart(2, '0')
+        day = String(today.getDate()).padStart(2, '0')
+        return `${year}-${month}-${day}`
+    }
+
     requestBody = {
         name: "Misi Automation",
         user_type: "all user",
@@ -21,8 +35,8 @@ When('api user create mission', async function () {
         exclude_flashsale: 0,
         mission_products: [],
         items: [],
-        start_date: "2024-09-30",
-        end_date: "2024-09-30",
+        start_date: getTodayDate(),
+        end_date: getTodayDate(),
         expiration_period: "fixed",
         duration: 0,
         reward_type: "supercoin",

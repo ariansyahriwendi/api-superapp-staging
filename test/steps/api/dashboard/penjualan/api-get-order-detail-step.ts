@@ -6,6 +6,8 @@ let response: any
 let invoice: any
 let orderId: any
 let orderItemId: any
+let grandTotal: any
+let quantity: any
 
 When('api user get order detail', async function () {
 
@@ -34,9 +36,17 @@ When('api user get order detail', async function () {
     orderItemId = response.data.result.detail_items[0].order_item_id
     console.log('Order Item ID:', orderItemId)
 
+    grandTotal = response.data.result.grand_total
+    console.log('Grand Total:', grandTotal)
+
+    quantity = response.data.result.order_items[0].quantity
+    console.log('Quantity:', quantity)
+
     this.invoice = invoice
     this.orderId = orderId
     this.orderItemId = orderItemId
+    this.grandTotal = grandTotal
+    this.quantity = quantity
 })
 
 

@@ -38,7 +38,7 @@ When('api user get order list', async function () {
     invoice = this.invoice
 
     id = response.data.result.data.find(item => item.invoice === invoice)?.id
-    console.log("Id:", id)
+    // console.log("Id:", id)
 
     this.id = id
 

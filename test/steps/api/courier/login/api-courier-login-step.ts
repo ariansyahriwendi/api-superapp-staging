@@ -4,6 +4,7 @@ import { expect } from 'chai'
 
 let response: any
 let requestBody: any
+let token: any
 
 When('api user courier login', async function () {
     
@@ -16,7 +17,7 @@ When('api user courier login', async function () {
 
     response = await axios.post('https://staging-api-courier.superapp.co.id/api/auth/login', requestBody)
 
-    console.log('Response Data:', JSON.stringify(response.data, null, 2));
+    // console.log('Response Data:', JSON.stringify(response.data, null, 2));
 
     expect(response.status).to.equal(200)
 
@@ -34,7 +35,7 @@ When('api user courier login', async function () {
     expect(response.data.result).to.have.property('vendor_id')
     expect(response.data.result).to.have.property('is_testing')
 
-    const token = response.data.result.token;
+    token = response.data.result.token;
     console.log('Token:', token);
 
     this.token = token

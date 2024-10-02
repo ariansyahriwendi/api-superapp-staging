@@ -7,45 +7,46 @@ let requestBody: any
 
 When('api user courier kirim', async function () {
 
-    const token = this.token;
-
     requestBody = {
-        "latitude": -7.2574717,
+        "latitude": -7.257472,
         "longitude": 122.7520867,
-        "goods_photo": "https://dressup.s3.ap-southeast-1.amazonaws.com/test/2024/07/18/image-e001ddc7-0b18-45fb-ac4b-de63dfd35115.png",
-        "reject_reason_note": "fraud",
-        "customer_reject_reason": "Fraud Potential",
-        "reject_reason": "Customer: Fraud Potential",
+        "goods_photos": ["https://dressup.s3.ap-southeast-1.amazonaws.com/test/2024/07/18/image-e001ddc7-0b18-45fb-ac4b-de63dfd35115.png"],
+        "reject_reason_note": "",
+        "customer_reject_reason": "",
+        "reject_reason": "",
         "payments": [
             {
-                "amount": 122222,
+                "amount": this.grandTotal,
                 "payment_photo": "https://dressup.s3.ap-southeast-1.amazonaws.com/test/2024/07/18/image-e001ddc7-0b18-45fb-ac4b-de63dfd35115.png",
                 "payment_type": "cash"
             }
         ],
         "orders": [
             {
-                "grand_total": 122222,
-                "is_no_rejected": false,
-                "order_id": 1435419316, // must edit
+                "grand_total": this.grandTotal,
+                "is_no_rejected": true,
+                "order_id": this.orderId,
                 "items": [
                     {
-                        "order_item_id": 6404274, // must edit
-                        "reject_quantity": 3,
-                        "reject_from": 4
+                        "order_item_id": this.orderItemId,
+                        "reject_quantity": 0,
+                        "reject_from": 0
                     }
                 ]
             }
         ]
     }
 
+    console.log(requestBody)
+
+
     response = await axios.post('https://staging-api-courier.superapp.co.id/api/transaction', requestBody, {
         headers: {
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${this.token}`
         }
     })
 
-    console.log('Response Data:', JSON.stringify(response.data, null, 2));
+    // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
     expect(response.status).to.equal(200)
 

@@ -5,8 +5,21 @@ import axios from 'axios'
 let response: any
 let requestBody: any
 let id: any
+let getTodayDate: any | string
+let today: Date
+let year: number
+let month: string
+let day: string
 
 When('api user create a new order', async function () {
+
+    getTodayDate = (): string => {
+        today = new Date()
+        year = today.getFullYear()
+        month = String(today.getMonth() + 1).padStart(2, '0')
+        day = String(today.getDate()).padStart(2, '0')
+        return `${year}-${month}-${day}`
+    }
 
     requestBody = {
         customer_id: 195945,
@@ -15,7 +28,7 @@ When('api user create a new order', async function () {
         customer_address_id: 166855,
         payment_type: "COD",
         note: "",
-        delivery_date: "2024-09-27",
+        delivery_date: getTodayDate(),
         group_type: "grosir",
         promos: [],
         promo_type: "",
@@ -81,6 +94,14 @@ When('api user create a new order', async function () {
 
 When('api user create a new order 4 product', async function () {
 
+    getTodayDate = (): string => {
+        today = new Date()
+        year = today.getFullYear()
+        month = String(today.getMonth() + 1).padStart(2, '0')
+        day = String(today.getDate()).padStart(2, '0')
+        return `${year}-${month}-${day}`
+    }
+
     requestBody = {
         customer_id: 195945,
         superagent_id: 195520,
@@ -88,7 +109,7 @@ When('api user create a new order 4 product', async function () {
         customer_address_id: 166855,
         payment_type: "COD",
         note: "",
-        delivery_date: "2024-09-24",
+        delivery_date: getTodayDate(),
         group_type: "grosir",
         promos: [],
         promo_type: "",
@@ -257,6 +278,14 @@ When('api user create a new order 4 product', async function () {
 
 When('api user create a new order with voucher', async function () {
 
+    getTodayDate = (): string => {
+        today = new Date()
+        year = today.getFullYear()
+        month = String(today.getMonth() + 1).padStart(2, '0')
+        day = String(today.getDate()).padStart(2, '0')
+        return `${year}-${month}-${day}`
+    }
+
     requestBody = {
         customer_id: 195945,
         superagent_id: 195520,
@@ -264,7 +293,7 @@ When('api user create a new order with voucher', async function () {
         customer_address_id: 166855,
         payment_type: "COD",
         note: "",
-        delivery_date: "2024-09-23",
+        delivery_date: getTodayDate(),
         group_type: "grosir",
         promos: [
             {
@@ -333,6 +362,14 @@ When('api user create a new order with voucher', async function () {
 
 When('api user create a new order 4 product with voucher', async function () {
 
+    getTodayDate = (): string => {
+        today = new Date()
+        year = today.getFullYear()
+        month = String(today.getMonth() + 1).padStart(2, '0')
+        day = String(today.getDate()).padStart(2, '0')
+        return `${year}-${month}-${day}`
+    }
+
     requestBody = {
         customer_id: 195945,
         superagent_id: 195520,
@@ -340,7 +377,7 @@ When('api user create a new order 4 product with voucher', async function () {
         customer_address_id: 166855,
         payment_type: "COD",
         note: "",
-        delivery_date: "2024-09-24",
+        delivery_date: getTodayDate(),
         group_type: "grosir",
         promos: [
             {

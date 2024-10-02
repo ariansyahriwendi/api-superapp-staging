@@ -60,9 +60,7 @@ When('api user create mission', async function () {
                 "Authorization": `Bearer ${this.token}`
             }
         })
-        
         expect(response.status).to.equal(200)
-        
 })
 
 

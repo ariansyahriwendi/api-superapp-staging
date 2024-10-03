@@ -5,9 +5,10 @@ import { expect } from 'chai'
 let response: any
 let requestBody: any
 let token: any
+let user: any
 
 When('api user login', async function () {
-    
+
     // token mas maul
     // requestBody = {"idtoken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdWxhbmEuamF5YWRpQG51c2FudGFyYS50ZWNobm9sb2d5IiwiaWF0IjoxNjg4NzE2MDA3LCJleHAiOjE2ODkzMjA4MDd9.4bPa_tlSFjqOZ5GBgzuOj80fh2FbnmcaGyI9ZA_ORYo"}
 
@@ -23,9 +24,13 @@ When('api user login', async function () {
     token = response.data.access_token
     console.log('Token:', token)
 
-    // console.log(response.headers['set-cookie']);
+    user = response.data.user
+    // console.log('User:', user)
+    // console.log('Warehouse Id:', user.warehouse_id)
 
     this.token = token
+    this.user = user
+    this.warehouse_id = user.warehouse_id
 })
 
 

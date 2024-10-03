@@ -12,11 +12,11 @@ await browser.setCookies([
     },
     {
         name: `warehouse`,
-        value: `{%22id%22:1}`
+        value: `{"id":${this.warehouse_id}}`
     },
     {
         name: `user`,
-        value: `{%22name%22:%22Ariansyah%20Riwendi%22%2C%22id%22:846%2C%22email%22:%22mariansyah.riwendi@nusantara.technology%22%2C%22status%22:1%2C%22warehouse_id%22:1%2C%22role_name%22:%22Product%20Tech%22%2C%22is_testing%22:0}`
+        value: JSON.stringify(this.user)
     },
     {
         name: `g_state`,
@@ -24,7 +24,7 @@ await browser.setCookies([
     }
 ])
 
-await browser.pause(3000)
+await browser.pause(5000)
 
 })
 

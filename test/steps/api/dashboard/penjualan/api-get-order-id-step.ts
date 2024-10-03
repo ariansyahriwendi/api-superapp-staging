@@ -6,7 +6,7 @@ let response: any
 let invoice: any
 let id: any
 
-When('api user get order list', async function () {
+When('api user get order id', async function () {
 
     await browser.pause(3000)
     

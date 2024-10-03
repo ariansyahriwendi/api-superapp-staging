@@ -1,7 +1,7 @@
-Feature: Order List
+Feature: Order Id
 
-        Scenario: Get order list
-             When api user get order list
+        Scenario: Get order id
+             When api user get order id
 
         Examples:
                   | a | b |

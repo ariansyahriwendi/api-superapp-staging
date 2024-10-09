@@ -7,8 +7,9 @@ let requestBody: any
 
 When('api user dikirim', async function () {
     
+    console.log('api user dikirim')
+
     try {
-    
         requestBody = {
         "ids": [this.orderId],
         "global_ids": [],
@@ -20,7 +21,6 @@ When('api user dikirim', async function () {
                 "Authorization": `Bearer ${this.token}`
             }
 })
-
     expect(response.status).to.equal(200)
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 } catch (error) {
@@ -35,7 +35,6 @@ When('api user dikirim', async function () {
                 "Authorization": `Bearer ${this.token}`
             }
 })
-
     expect(response.status).to.equal(200)
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 }

@@ -7,6 +7,8 @@ let requestBody: any
 
 When('api user create setoran', async function () {
 
+    console.log('api user create setoran')
+
 requestBody = {
     type: "inhouse",
     warehouse_id: 1,

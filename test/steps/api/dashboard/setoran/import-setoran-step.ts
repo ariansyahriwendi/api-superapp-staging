@@ -9,6 +9,8 @@ let payment_type:any
 
 When('api user import setoran', async function () {
 
+    console.log('api user import setoran')
+
 requestBody = {
     type: 'inhouse',
     warehouse_id: 1,
@@ -26,14 +28,12 @@ response = await axios.post(`https://staging-api-dashboard.superapp.co.id/api/ac
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
     orderAmountsId = response.data.result.data[0].order_amounts[0].id
-    console.log('Order Amounts Id:', orderAmountsId)
+    console.log('order amounts id:', orderAmountsId)
 
     payment_type = response.data.result.data[0].order_amounts[0].payment_type
-    console.log('Payment Type:', payment_type)
+    console.log('payment type:', payment_type)
 
     this.orderAmountsId = orderAmountsId
     this.payment_type = payment_type
-
-
 
 })

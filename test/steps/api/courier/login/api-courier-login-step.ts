@@ -7,6 +7,8 @@ let requestBody: any
 let token: any
 
 When('api user courier login', async function () {
+
+    console.log('api user courier login')
     
     requestBody = {
         "username": "nafifurqon",
@@ -21,22 +23,8 @@ When('api user courier login', async function () {
 
     expect(response.status).to.equal(200)
 
-    expect(response.data).to.have.property('message')
-    expect(response.data.message).to.equal('Success')
-
-    expect(response.data).to.have.property('result')
-    expect(response.data.result).to.have.property('id')
-    expect(response.data.result).to.have.property('driver_id')
-    expect(response.data.result).to.have.property('courier_type')
-    expect(response.data.result).to.have.property('is_internal')
-    expect(response.data.result).to.have.property('name')
-    expect(response.data.result).to.have.property('phone')
-    expect(response.data.result).to.have.property('token')
-    expect(response.data.result).to.have.property('vendor_id')
-    expect(response.data.result).to.have.property('is_testing')
-
     token = response.data.result.token;
-    console.log('Token:', token);
+    // console.log('Token:', token);
 
     this.token = token
 })

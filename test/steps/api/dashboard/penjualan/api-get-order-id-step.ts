@@ -8,6 +8,8 @@ let id: any
 
 When('api user get order id', async function () {
 
+    console.log('api user get order id')
+
     await browser.pause(3000)
     
     response = await axios.get(`https://staging-api-dashboard.superapp.co.id/api/order/list`, {

@@ -7,6 +7,8 @@ let dynamicData: any
 
 When('api user create csv setoran', async function () {
 
+    console.log('api user create csv setoran')
+
     createDynamicCSV = async (data: any[]) => {
         csvWriter = createObjectCsvWriter({
             path: 'src/documents/setoran.csv',

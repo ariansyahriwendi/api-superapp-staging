@@ -5,6 +5,9 @@ import axios from 'axios'
 let response: any
 
 When('api user publish mission', async function () {
+
+    console.log('api user publish mission')
+
     response = await axios.put(
         `https://staging-api-dashboard.superapp.co.id/api/mission/publish/${this.missionId}`, 
         {}, 

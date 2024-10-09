@@ -15,6 +15,8 @@ let secondId: any
 
 When('api user create a new order', async function () {
 
+    console.log('api user create a new order')
+
     getTodayDate = (): string => {
         today = new Date()
         year = today.getFullYear()
@@ -89,6 +91,8 @@ When('api user create a new order', async function () {
 })
 
 When('api user create a new order 4 product', async function () {
+
+    console.log('api user create a new order')
 
     getTodayDate = (): string => {
         today = new Date()
@@ -267,12 +271,13 @@ When('api user create a new order 4 product', async function () {
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
     id = response.data.result.id
-    // console.log('Id:', id)
 
     this.id = id
 })
 
 When('api user create a new order with voucher', async function () {
+
+    console.log('api user create a new order with voucher')
 
     getTodayDate = (): string => {
         today = new Date()
@@ -350,12 +355,13 @@ When('api user create a new order with voucher', async function () {
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
     id = response.data.result.id
-    // console.log('Id:', Id)
     this.id = id
 
 })
 
 When('api user create a new order 4 product with voucher', async function () {
+
+    console.log('api user create a new order 4 product with voucher')
 
     getTodayDate = (): string => {
         today = new Date()
@@ -538,12 +544,13 @@ When('api user create a new order 4 product with voucher', async function () {
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
     id = response.data.result.id
-    // console.log('Id:', Id)
     this.id = id
 
 })
 
 When('api user create a new first order', async function () {
+
+    console.log('api user create a new first order')
 
     getTodayDate = (): string => {
         today = new Date()
@@ -627,6 +634,8 @@ When('api user create a new first order', async function () {
 
 When('api user create a new second order', async function () {
 
+    console.log('api user create a new second order')
+
     getTodayDate = (): string => {
         today = new Date()
         year = today.getFullYear()
@@ -708,6 +717,8 @@ When('api user create a new second order', async function () {
 })
 
 When('api user create a new first order 4 product', async function () {
+
+    console.log('api user create a new first order 4 product')
 
     getTodayDate = (): string => {
         today = new Date()
@@ -894,6 +905,8 @@ When('api user create a new first order 4 product', async function () {
 
 When('api user create a new second order 4 product', async function () {
 
+    console.log('api user create a new second order 4 product')
+
     getTodayDate = (): string => {
         today = new Date()
         year = today.getFullYear()
@@ -1072,7 +1085,6 @@ When('api user create a new second order 4 product', async function () {
 
     secondId = response.data.result.id
     id = response.data.result.id
-    // console.log('Second Id:', id)
 
     this.id = id
     this.secondId = secondId

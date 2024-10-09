@@ -7,6 +7,8 @@ let requestBody: any
 
 When('api user ganti vendor', async function () {
 
+    console.log('api user ganti vendor')
+
     try {
         requestBody = {
             "ids": [this.orderId],

@@ -5,7 +5,9 @@ import axios from 'axios'
 let missionId: number
 let response: any
 
-When('api user get mission', async function () {
+When('api user get mission detail', async function () {
+
+    console.log('api user get mission detail')
 
     await browser.pause(3000)
 

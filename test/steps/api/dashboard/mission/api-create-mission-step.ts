@@ -14,6 +14,8 @@ let day: string
 
 When('api user create mission', async function () {
 
+    console.log('api user create mission')
+
     getTodayDate = (): string => {
         today = new Date()
         year = today.getFullYear()

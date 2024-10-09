@@ -7,6 +7,8 @@ let requestBody: any
 
 When('api user courier kirim', async function () {
 
+    console.log('api user courier kirim')
+
     requestBody = {
         "latitude": -7.257472,
         "longitude": 122.7520867,

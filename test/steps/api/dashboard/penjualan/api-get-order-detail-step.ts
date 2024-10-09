@@ -18,6 +18,8 @@ When('api user get order detail', async function () {
 
     await browser.pause(3000)
 
+    console.log('api user get order detail')
+
     response = await axios.get(`https://staging-api-dashboard.superapp.co.id/api/order/detail/${this.id}`, {
         headers: {
             "Authorization": `Bearer ${this.token}`
@@ -30,19 +32,19 @@ When('api user get order detail', async function () {
     date = response.data.result.order_delivery.date
 
     invoice = response.data.result.invoice
-    console.log('Invoice:', invoice)
+    console.log('invoice:', invoice)
 
     orderId = response.data.result.id
-    console.log('Order ID:', orderId)
+    console.log('order id:', orderId)
 
     orderItemId = response.data.result.detail_items[0].order_item_id
-    console.log('Order Item ID:', orderItemId)
+    console.log('order item iD:', orderItemId)
 
     grandTotal = response.data.result.grand_total
-    console.log('Grand Total:', grandTotal)
+    console.log('grand total:', grandTotal)
 
     quantity = response.data.result.order_items[0].quantity
-    console.log('Quantity:', quantity)
+    console.log('quantity:', quantity)
 
     this.date = date
     this.invoice = invoice

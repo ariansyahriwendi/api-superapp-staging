@@ -7,6 +7,8 @@ let requestBody: any
 
 When('api user complete order', async function () {
 
+    console.log('api user complete order')
+
 requestBody = {
     image: "https://dressup.s3.ap-southeast-1.amazonaws.com/upload-images/2024/10/09/image-a753a185-97f2-497a-a82f-f739d39d7202.jpeg",
     bulk_complete_id: this.complete_order_id

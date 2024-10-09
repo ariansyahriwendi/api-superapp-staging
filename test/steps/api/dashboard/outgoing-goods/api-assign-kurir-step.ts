@@ -7,6 +7,8 @@ let requestBody: any
 
 When('api user assign kurir', async function () {
 
+    console.log('api user assign kurir')
+
     try {
         requestBody = {
             "ids": [this.orderId],

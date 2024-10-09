@@ -5,11 +5,10 @@ import { expect } from 'chai'
 let response: any
 let invoice: any
 let orderId: any
-let orderItemId: any
 
 When('api user get order list', async function () {
 
-    // await browser.pause(3000)
+    console.log('api user get order list')
     
     response = await axios.get(`https://staging-api-dashboard.superapp.co.id/api/order/list`, {
         headers: {
@@ -41,21 +40,7 @@ When('api user get order list', async function () {
 
     invoice = "T241002-110"
 
-    orderId = response.data.result.data.find(item => item.invoice === invoice)?.id
+    orderId = response.data.result.data.find((item: { invoice: any }) => item.invoice === invoice)?.id
     console.log("Order Id:", orderId)
 
-    // invoice = response.data.result.invoice
-    // console.log('Invoice:', invoice)
-
-    // orderId = response.data.result.id
-    // console.log('Order ID:', orderId)
-
-    // orderItemId = response.data.result.detail_items[0].order_item_id
-    // console.log('Order Item ID:', orderItemId)
-
-    // this.invoice = invoice
-    // this.orderId = orderId
-    // this.orderItemId = orderItemId
 })
-
-// export { invoice, orderId, orderItemId }

@@ -10,6 +10,8 @@ let form: any
 
 When('api user upload setoran document', async function () {
 
+    console.log('api user upload setoran document')
+
     filePath = 'src/documents/setoran.csv'
 
     form = new FormData()

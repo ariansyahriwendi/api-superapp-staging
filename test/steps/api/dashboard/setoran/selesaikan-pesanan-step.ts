@@ -8,6 +8,8 @@ let complete_order_id: any
 
 When('api user selesaikan pesanan', async function () {
 
+    console.log('api user selesaikan pesanan')
+
 requestBody = {
     warehouse_id: 1,
     period: "today",
@@ -31,7 +33,7 @@ response = await axios.post(`https://staging-api-dashboard.superapp.co.id/api/ac
     expect(response.status).to.equal(200)
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
     complete_order_id = response.data.result
-    console.log('Complete Order Id: ', complete_order_id)
+    console.log('complete order id: ', complete_order_id)
 
     this.complete_order_id = complete_order_id
 

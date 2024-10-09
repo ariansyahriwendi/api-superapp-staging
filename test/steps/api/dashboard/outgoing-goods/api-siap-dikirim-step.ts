@@ -6,6 +6,8 @@ let response: any
 let requestBody: any
 
 When('api user siap dikirim', async function () {
+
+    console.log('api user siap dikirim')
     
     try {
     

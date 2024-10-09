@@ -15,9 +15,9 @@ When('api user create csv setoran', async function () {
             header: [
                 { id: 'field1', title: 'tanggal kirim' },
                 { id: 'field2', title: 'invoice' },
-                { id: 'field3', title: 'cash'},
-                { id: 'field4', title: 'transfer'},
-                { id: 'field5', title: 'checklist'}
+                { id: 'field3', title: 'cash' },
+                { id: 'field4', title: 'transfer' },
+                { id: 'field5', title: 'checklist' }
             ],
         })
         await csvWriter.writeRecords(data)

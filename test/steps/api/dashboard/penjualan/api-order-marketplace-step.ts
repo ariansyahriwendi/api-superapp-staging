@@ -13,17 +13,18 @@ let day: string
 let firstId: any
 let secondId: any
 
+getTodayDate = (): string => {
+    today = new Date()
+    year = today.getFullYear()
+    month = String(today.getMonth() + 1).padStart(2, '0')
+    day = String(today.getDate()).padStart(2, '0')
+
+    return `${year}-${month}-${day}`
+}
+
 When('api user create a new order', async function () {
 
     console.log('api user create a new order')
-
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
 
     requestBody = {
         customer_id: 195945,
@@ -93,14 +94,6 @@ When('api user create a new order', async function () {
 When('api user create a new order 4 product', async function () {
 
     console.log('api user create a new order')
-
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
 
     requestBody = {
         customer_id: 195945,
@@ -279,14 +272,6 @@ When('api user create a new order with voucher', async function () {
 
     console.log('api user create a new order with voucher')
 
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
-
     requestBody = {
         customer_id: 195945,
         superagent_id: 195520,
@@ -362,14 +347,6 @@ When('api user create a new order with voucher', async function () {
 When('api user create a new order 4 product with voucher', async function () {
 
     console.log('api user create a new order 4 product with voucher')
-
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
 
     requestBody = {
         customer_id: 195945,
@@ -552,14 +529,6 @@ When('api user create a new first order', async function () {
 
     console.log('api user create a new first order')
 
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
-
     requestBody = {
         customer_id: 195945,
         superagent_id: 195520,
@@ -636,14 +605,6 @@ When('api user create a new second order', async function () {
 
     console.log('api user create a new second order')
 
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
-
     requestBody = {
         customer_id: 195945,
         superagent_id: 195520,
@@ -719,14 +680,6 @@ When('api user create a new second order', async function () {
 When('api user create a new first order 4 product', async function () {
 
     console.log('api user create a new first order 4 product')
-
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
 
     requestBody = {
         customer_id: 195945,
@@ -906,14 +859,6 @@ When('api user create a new first order 4 product', async function () {
 When('api user create a new second order 4 product', async function () {
 
     console.log('api user create a new second order 4 product')
-
-    getTodayDate = (): string => {
-        today = new Date()
-        year = today.getFullYear()
-        month = String(today.getMonth() + 1).padStart(2, '0')
-        day = String(today.getDate()).padStart(2, '0')
-        return `${year}-${month}-${day}`
-    }
 
     requestBody = {
         customer_id: 195945,

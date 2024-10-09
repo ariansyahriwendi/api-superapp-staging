@@ -36,31 +36,10 @@ When('api user courier kirim', async function () {
             }
         ]
     }
-
-    console.log(requestBody)
-
-
     response = await axios.post('https://staging-api-courier.superapp.co.id/api/transaction', requestBody, {
         headers: {
             'Authorization': `Bearer ${this.token}`
         }
     })
-
-    // console.log('Response Data:', JSON.stringify(response.data, null, 2))
-
     expect(response.status).to.equal(200)
-
-    // expect(response.data).to.have.property('message')
-    // expect(response.data.message).to.equal('Success')
-
-    // expect(response.data).to.have.property('result')
-    // expect(response.data.result).to.have.property('id')
-    // expect(response.data.result).to.have.property('driver_id')
-    // expect(response.data.result).to.have.property('courier_type')
-    // expect(response.data.result).to.have.property('is_internal')
-    // expect(response.data.result).to.have.property('name')
-    // expect(response.data.result).to.have.property('phone')
-    // expect(response.data.result).to.have.property('token')
-    // expect(response.data.result).to.have.property('vendor_id')
-    // expect(response.data.result).to.have.property('is_testing')
 })

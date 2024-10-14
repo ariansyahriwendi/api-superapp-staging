@@ -11,7 +11,7 @@ When('api user assign kurir', async function () {
 
     try {
         requestBody = {
-            "ids": [this.orderId],
+            "ids": [this.first_order_id],
             "global_ids": [],
             "type": "mobil",
             "driver_id": 300,
@@ -34,7 +34,7 @@ When('api user assign kurir', async function () {
 
             requestBody = {
                 "ids": [],
-                "global_ids": [this.orderId],
+                "global_ids": [this.first_order_id],
                 "type": "mobil",
                 "driver_id": 300,
                 "driver_name": null,

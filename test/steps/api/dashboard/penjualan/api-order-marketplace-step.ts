@@ -93,7 +93,7 @@ When('api user create a new order', async function () {
 
 When('api user create a new order 4 product', async function () {
 
-    console.log('api user create a new order')
+    console.log('api user create a new order 4 product')
 
     requestBody = {
         customer_id: 195945,
@@ -107,12 +107,12 @@ When('api user create a new order 4 product', async function () {
         promos: [],
         promo_type: "",
         use_point: true,
-        grand_total: 2320000,
-        sub_total: 2320000,
+        grand_total: 3480000,
+        sub_total: 3480000,
         discount: 0,
         items: [
             {
-                sub_total: 360000,
+                sub_total: 540000,
                 promos: [],
                 id: "null",
                 item_id: "null",
@@ -133,11 +133,11 @@ When('api user create a new order 4 product', async function () {
                 dimension_width: "",
                 weight: "0",
                 delete: 0,
-                quantity: 4,
+                quantity: 6,
                 type: "regular"
             },
             {
-                sub_total: 160000,
+                sub_total: 240000,
                 promos: [],
                 id: "null",
                 item_id: "null",
@@ -158,7 +158,7 @@ When('api user create a new order 4 product', async function () {
                 dimension_width: "",
                 weight: "0",
                 delete: 0,
-                quantity: 4,
+                quantity: 6,
                 type: "regular"
             },
             {
@@ -169,7 +169,7 @@ When('api user create a new order 4 product', async function () {
                 product_id: 7566,
                 product_name: "Vendor IPK",
                 unit: "Karton",
-                quantity: 4,
+                quantity: 6,
                 selling_price: "110000.000",
                 content: "",
                 conversion_points: 0,
@@ -189,7 +189,7 @@ When('api user create a new order 4 product', async function () {
                 product_id: 7567,
                 product_name: "Vendor IPK 2",
                 unit: "Pouch",
-                quantity: 4,
+                quantity: 6,
                 selling_price: "110000.000",
                 content: "",
                 conversion_points: 0,
@@ -209,7 +209,7 @@ When('api user create a new order 4 product', async function () {
                 product_id: 7566,
                 product_name: "Vendor IPK",
                 unit: "Karton",
-                quantity: 4,
+                quantity: 6,
                 selling_price: "110000.000",
                 content: "",
                 conversion_points: 0,
@@ -229,7 +229,7 @@ When('api user create a new order 4 product', async function () {
                 product_id: 7567,
                 product_name: "Vendor IPK 2",
                 unit: "Pouch",
-                quantity: 4,
+                quantity: 6,
                 selling_price: "120000.000",
                 content: "",
                 conversion_points: 0,

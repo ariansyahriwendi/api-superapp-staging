@@ -1,9 +1,12 @@
-Feature: E2E Penjualan - Dikirim - Kirim
+Feature: E2E Penjualan - Dikirim
 
-        Scenario: Penjualan - Dikirim - Courier Kirim
+        Scenario: Order 2x - Dikirim 1x pengiriman
              When api user login
-             When api user create a new order
-             When api user get order detail
+             When api user create a new first order
+             When api user create a new second order
+             When api user get first order detail
+             When api user get second order detail
+             When api user get order detail invoice global
              When api user ganti vendor
              When api user assign kurir
              When api user siap dikirim
@@ -13,12 +16,12 @@ Feature: E2E Penjualan - Dikirim - Kirim
              When api user courier kirim
 
              When api user login
-             When api user get order detail
+             When api user get order detail invoice global
              When api user create csv setoran
              When api user upload setoran document
              When api user import setoran
              When api user create setoran
-             When api user get transfer document id
+             When api user get transfer document id global invoice
              When api user selesaikan pesanan
              When api user complete order
 

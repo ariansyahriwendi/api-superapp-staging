@@ -3,7 +3,7 @@ import axios from 'axios'
 import { expect } from 'chai'
 
 let response: any
-let invoice: any
+let first_order_invoice: any
 let id: any
 
 When('api user get order id', async function () {
@@ -37,9 +37,9 @@ When('api user get order id', async function () {
     expect(response.status).to.equal(200)
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
-    invoice = this.invoice
+    first_order_invoice = this.first_order_invoice
 
-    id = response.data.result.data.find(item => item.invoice === invoice)?.id
+    id = response.data.result.data.find(item => item.first_order_invoice === first_order_invoice)?.id
     // console.log("Id:", id)
 
     this.id = id

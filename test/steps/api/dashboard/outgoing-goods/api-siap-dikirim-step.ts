@@ -12,7 +12,7 @@ When('api user siap dikirim', async function () {
     try {
     
     requestBody = {
-        "ids": [this.orderId],
+        "ids": [this.first_order_id],
         "global_ids": [], 
         "vehicle_type": "car",
         "action": "READY_TO_DELIVER"
@@ -27,7 +27,7 @@ When('api user siap dikirim', async function () {
     } catch (error) {
         requestBody = {
             "ids": [],
-            "global_ids": [this.orderId], 
+            "global_ids": [this.first_order_id], 
             "vehicle_type": "car",
             "action": "READY_TO_DELIVER"
         }

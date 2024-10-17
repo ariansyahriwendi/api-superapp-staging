@@ -4,7 +4,7 @@ import { expect } from 'chai'
 
 let response: any
 let requestBody: any
-let orderAmountsId: any
+let order_amounts_id: any
 let payment_type:any
 
 When('api user import setoran', async function () {
@@ -27,13 +27,13 @@ response = await axios.post(`https://staging-api-dashboard.superapp.co.id/api/ac
     expect(response.status).to.equal(200)
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
-    orderAmountsId = response.data.result.data[0].order_amounts[0].id
-    console.log('order amounts id:', orderAmountsId)
+    order_amounts_id = response.data.result.data[0].order_amounts[0].id
+    console.log('order amounts id:', order_amounts_id)
 
     payment_type = response.data.result.data[0].order_amounts[0].payment_type
     console.log('payment type:', payment_type)
 
-    this.orderAmountsId = orderAmountsId
+    this.order_amounts_id = order_amounts_id
     this.payment_type = payment_type
 
 })

@@ -6,17 +6,17 @@ Feature: E2E Penjualan - Dikirim
              When api user create a new second order
              When api user get first order detail
              When api user get second order detail
-             When api user get order detail invoice global
+             When api user get order detail global invoice
              When api user ganti vendor
              When api user assign kurir
              When api user siap dikirim
              When api user dikirim
 
              When api user courier login
-             When api user courier kirim
+             When api kirim 2x order 1 produk diterima semua
 
              When api user login
-             When api user get order detail invoice global
+             When api user get order detail global invoice
              When api user create csv setoran
              When api user upload setoran document
              When api user import setoran

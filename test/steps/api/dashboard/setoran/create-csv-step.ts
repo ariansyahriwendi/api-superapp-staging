@@ -23,7 +23,13 @@ When('api user create csv setoran', async function () {
         await csvWriter.writeRecords(data)
     }
     dynamicData = [
-        { field1: `${this.date}`, field2: `${this.invoice}`, field3: `${this.grandTotal}`, field4: 0, field5: 'v' },
+        {
+            field1: `${this.date}`,
+            field2: `${this.first_order_invoice}`,
+            field3: `${this.first_order_grand_total}`,
+            field4: 0,
+            field5: 'v'
+        },
     ]
     await createDynamicCSV(dynamicData)
 })

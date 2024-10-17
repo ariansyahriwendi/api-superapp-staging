@@ -33,7 +33,7 @@ let second_order_fourth_product_quantity: any
 let first_order_grand_total: any
 let second_order_grand_total: any
 
-let global_invoice
+let global_invoice: any
 
 When('api user get order detail', async function () {
 

@@ -10,7 +10,7 @@ Feature: E2E Penjualan - Setoran
              When api user dikirim
 
              When api user courier login
-             When api user courier kirim
+             When api kirim 1x order 1 produk diterima semua
 
              When api user login
              When api user get order detail

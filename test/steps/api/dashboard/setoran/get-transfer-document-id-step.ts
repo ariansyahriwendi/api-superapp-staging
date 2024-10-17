@@ -17,7 +17,7 @@ response = await axios.get(`https://staging-api-dashboard.superapp.co.id/api/acc
     expect(response.status).to.equal(200)
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
-    transfer_document_id = response.data.result.data.find((item: { invoice: any }) => item.invoice === this.invoice).id
+    transfer_document_id = response.data.result.data.find((item: { first_order_invoice: any }) => item.first_order_invoice === this.first_order_invoice).id
     console.log('transfer document id:', transfer_document_id)
 
     this.transfer_document_id = transfer_document_id
@@ -36,7 +36,7 @@ response = await axios.get(`https://staging-api-dashboard.superapp.co.id/api/acc
     expect(response.status).to.equal(200)
     // console.log('Response Data:', JSON.stringify(response.data, null, 2))
 
-    transfer_document_id = response.data.result.data.find((item: { invoice_global: any }) => item.invoice_global === this.invoice).id
+    transfer_document_id = response.data.result.data.find((item: { global_invoice: any }) => item.global_invoice === this.global_invoice).id
     console.log('transfer document id:', transfer_document_id)
 
     this.transfer_document_id = transfer_document_id

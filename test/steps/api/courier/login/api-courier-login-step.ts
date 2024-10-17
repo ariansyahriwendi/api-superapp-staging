@@ -6,18 +6,19 @@ let response: any
 let requestBody: any
 let token: any
 
-When('api user courier login', async function () {
+When('api courier user login', async function () {
 
-    console.log('api user courier login')
+    console.log('api courier user login')
     
     requestBody = {
-        "username": "nafifurqon",
-        "password": "123456",
-        "device_id": "TE1A.220922.029",
-        "phone_model": "google, emu64a, sdk_gphone64_arm64"
+        username: "nafifurqon",
+        password: "123456",
+        device_id: "TE1A.220922.029",
+        phone_model: "google, emu64a, sdk_gphone64_arm64"
     }
 
-    response = await axios.post('https://staging-api-courier.superapp.co.id/api/auth/login', requestBody)
+    response = await axios.post('https://staging-api-courier.superapp.co.id/api/auth/login',
+        requestBody)
 
     // console.log('Response Data:', JSON.stringify(response.data, null, 2));
 

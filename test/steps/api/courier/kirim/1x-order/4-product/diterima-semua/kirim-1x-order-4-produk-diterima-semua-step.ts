@@ -5,9 +5,9 @@ import { expect } from 'chai'
 let response: any
 let requestBody: any
 
-When('api kirim 1x order 4 produk diterima semua', async function () {
+When('api courier user kirim 1x order 4 product diterima semua', async function () {
 
-    console.log('api kirim 1x order 4 produk diterima semua')
+    console.log('api courier user kirim 1x order 4 product diterima semua')
 
     requestBody = {
         latitude: -7.257472,

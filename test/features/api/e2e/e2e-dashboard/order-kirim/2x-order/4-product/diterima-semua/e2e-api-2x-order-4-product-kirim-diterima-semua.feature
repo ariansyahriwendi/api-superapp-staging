@@ -1,6 +1,6 @@
-Feature: E2E Order - Kirim
+Feature: e2e api 2x order 4 product kirim diterima semua
 
-        Scenario: Order - kirim
+        Scenario: e2e api 2x order 4 product kirim diterima semua
              When api user login
              When api user create a new first order 4 product
              When api user create a new second order 4 product
@@ -12,8 +12,8 @@ Feature: E2E Order - Kirim
              When api user siap dikirim
              When api user dikirim
 
-             When api user courier login
-             When api kirim 2x order 4 produk diterima semua
+             When api courier user login
+             When api courier user kirim 2x order 4 product diterima semua
 
         Examples:
                   | a | b |
